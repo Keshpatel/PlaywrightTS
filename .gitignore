@@ -6,6 +6,3 @@ node_modules/
 /blob-report/
 /playwright/.cache/
 .auth/
-.png
-.tmp
-npm-debug.log
