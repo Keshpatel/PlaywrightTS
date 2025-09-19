@@ -13,7 +13,7 @@ test("GET /products ", async ({ request })  => {
     expect(body.total).toBe(50);
 });
 
-test("POSt /user/login ", async ({ request })  => {
+test("POST /user/login ", async ({ request })  => {
 
     const apiUrl ="https://api.practicesoftwaretesting.com";
     const response = await request.post(apiUrl + "/user/login");
