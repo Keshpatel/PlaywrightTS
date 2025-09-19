@@ -4,18 +4,19 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test" : "npx playwright test", 
+    "test": "npx playwright test",
     "test:chromium": "npx playwright test --project chromium",
     "test:first": "npx playwright test --grep @sanity",
     "test:local": "BASE_URL=http://localhost:4200 npx playwright test",
     "test:report": "npx playwright test && npx playwright show-report",
     "test:ui": "npx playwright test --ui"
-    }, 
+  },
   "author": "",
   "license": "ISC",
   "type": "commonjs",
   "devDependencies": {
     "@playwright/test": "^1.55.0",
-    "@types/node": "^24.5.0"
+    "@types/node": "^24.5.0",
+    "dotenv": "^17.2.2"
   }
 }

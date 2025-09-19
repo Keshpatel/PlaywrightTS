@@ -6,11 +6,7 @@ test.describe("Verify Home Page with No Auth ", () => {
      await page.goto("https://practicesoftwaretesting.com/");
      console.log("navigated to software testing practice homePage sucessfully");
   });
-
-  test.afterEach(async ({ page }) => {
-     await page.close();  
-  });
-
+  
   test("visual test", async ({ page }) => {
     await page.waitForLoadState("networkidle");
     await expect(page).toHaveScreenshot("home-page-no-auth.png");
@@ -46,7 +42,7 @@ test.describe("Home Page customer 01 auth ", () => {
 
   test("visual test authorized ", async ({ page }) => {
     await page.waitForLoadState("networkidle");
-    await expect (page).toHaveScreenshot("Home-page-customer01.png");
+    await expect (page).toHaveScreenshot("home-page-customer.png");
   });
 
   test("Verify Customer 01 Signed in ", async ({page})=> {
