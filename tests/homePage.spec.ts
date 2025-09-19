@@ -13,7 +13,7 @@ test.describe("Verify Home Page with No Auth ", () => {
 
   test("visual test", async ({ page }) => {
     await page.waitForLoadState("networkidle");
-    await expect(page).toHaveScreenshot("Home-page-no-auth.png");
+    await expect(page).toHaveScreenshot("home-page-no-auth.png");
   }); 
 
   test("Verify Home Page sign In Button", async ({ page }) => {    

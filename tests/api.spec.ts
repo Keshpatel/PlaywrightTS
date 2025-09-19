@@ -13,15 +13,19 @@ test("GET /products ", async ({ request })  => {
     expect(body.total).toBe(50);
 });
 
-test("POST /user/login ", async ({ request })  => {
-
+test("POST /users/login ", async ({ request })  => {
+   //https://api.practicesoftwaretesting.com/users/login
     const apiUrl ="https://api.practicesoftwaretesting.com";
-    const response = await request.post(apiUrl + "/user/login");
 
+    const response = await request.post(apiUrl + "/users/login", {
+        data : {
+            email : "customer@practicesoftwaretesting.com",
+            password : "welcome01",
+        },
+    });
     expect(response.status()).toBe(200);
 
     const body = await response.json();
     //console.log(body);
-    expect(body.data.length).toBe(9);
-    expect(body.total).toBe(50);
+    expect(body.access_token).toBeTruthy();
 });
